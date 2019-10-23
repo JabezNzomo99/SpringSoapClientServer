@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://localhost:7000:movie"
+           targetNamespace="http://localhost:7000:movie"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="movie">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="genre" type="xs:string"/>
+            <xs:element name="year_released" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="getMovieRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getMovieResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="movie" type="tns:movie"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+</xs:schema>
