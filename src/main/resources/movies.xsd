@@ -1,6 +1,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:tns="http://localhost:7000:movie"
-           targetNamespace="http://localhost:7000:movie"
+           xmlns:tns="http://localhost:8080/movies"
+           targetNamespace="http://localhost:8080/movies"
            elementFormDefault="qualified">
 
     <xs:complexType name="movie">
@@ -27,6 +27,18 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="getAllMoviesRequest">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
-
+    <xs:element name="getAllMoviesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="movie" type="tns:movie"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>

@@ -1,0 +1,6 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:gs="http://localhost:8080/movies"> <soapenv:Header/>
+    <soapenv:Body>
+        <gs:getAllMoviesRequest/>
+    </soapenv:Body>
+</soapenv:Envelope>

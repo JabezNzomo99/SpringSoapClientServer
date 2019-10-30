@@ -30,7 +30,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("MoviesPort");
         wsdl11Definition.setLocationUri("/ws");
-        wsdl11Definition.setTargetNamespace("http://localhost:movie");
+        wsdl11Definition.setTargetNamespace("http://localhost/movie");
         wsdl11Definition.setSchema(moviesSchema);
         return wsdl11Definition;
     }
